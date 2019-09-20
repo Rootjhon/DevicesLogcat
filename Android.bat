@@ -8,6 +8,7 @@ SET "hour_one=%time:~1,1%"
 SET "minute=%time:~3,2%"
 SET "second=%time:~6,2%"
 
-SET ADB_EXE="%~dp0\Tools\ADB\adb.exe"
+SET RUNNER="%~dp0\Tools\ADB\run.bat"
+SET MTEE_EXE="%~dp0\Tools\mtee.exe"
 
-%ADB_EXE% logcat -v time -d 2>&1 Android_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log &
+CALL %RUNNER% | %MTEE_EXE% "Android_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log"
