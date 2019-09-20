@@ -10,4 +10,4 @@ SET "second=%time:~6,2%"
 
 SET ADB_EXE="%~dp0\Tools\ADB\adb.exe"
 
-%ADB_EXE% logcat -v time -d >  Android_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log &
+%ADB_EXE% logcat -v time -d 2>&1 Android_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log &

@@ -10,4 +10,4 @@ SET "second=%time:~6,2%"
 
 SET LOG_EXE="%~dp0\Tools\iOSLogInfo\sdsiosloginfo.exe"
 
-%LOG_EXE% -d > IOS_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log
+%LOG_EXE% -d 2>&1 IOS_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log
