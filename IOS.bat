@@ -8,6 +8,6 @@ SET "hour_one=%time:~1,1%"
 SET "minute=%time:~3,2%"
 SET "second=%time:~6,2%"
 
-SET ADB_EXE="%~dp0\Tools\ADB\adb.exe"
+SET LOG_EXE="%~dp0\Tools\iOSLogInfo\sdsiosloginfo.exe"
 
-%ADB_EXE% logcat -v time -d >  Android_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log &
+%LOG_EXE% -d > IOS_%year%%month%%day%%hour_ten%%hour_one%%minute%%second%.log
